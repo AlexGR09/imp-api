@@ -158,4 +158,21 @@ return [
 
         'store' => 'default',
     ],
+
+    'guards' => [
+        'web' => [
+            'driver' => 'session',
+            'provider' => 'users',
+        ],
+
+        'api' => [
+            'driver' => 'jwt',
+            'provider' => 'users',
+        ],
+        'api-permission' => [
+            'driver' => 'jwt',
+            'provider' => 'users',
+        ]
+    ]
+
 ];

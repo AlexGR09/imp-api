@@ -19,7 +19,7 @@ use Illuminate\Support\Facades\Route;
 Route::post('login', [AuthController::class, 'login']);
 Route::post('register', [AuthController::class, 'register']);
 
-Route::middleware(['AuthJwt'])->group(function () {
+Route::middleware(['AuthJwt','role:admin'])->group(function () {
 
     Route::get('logout', [AuthController::class, 'logout']);
 
